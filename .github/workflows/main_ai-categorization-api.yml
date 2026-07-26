@@ -46,11 +46,11 @@ jobs:
       # 1. Remove the SCM_DO_BUILD_DURING_DEPLOYMENT app setting from your Azure App Service Environment variables.
       # 2. Refer to sample workflows for alternative deployment strategies: https://github.com/Azure/actions-workflow-samples/tree/master/AppService
       - name: Clean up build artifacts
-       run: |
-         rm -rf .git
-         find . -type d -name __pycache__ -exec rm -rf {} +
-         find . -type d -name .pytest_cache -exec rm -rf {} +
-         find . -type d -name .egg-info -exec rm -rf {} +
+      run: |
+        rm -rf .git
+        find . -type d -name __pycache__ -exec rm -rf {} +
+        find . -type d -name .pytest_cache -exec rm -rf {} +
+        find . -type d -name .egg-info -exec rm -rf {} +
 
   deploy:
     runs-on: ubuntu-latest
