@@ -45,12 +45,7 @@ jobs:
       # If you prefer to disable the Oryx build process during deployment, follow these steps:
       # 1. Remove the SCM_DO_BUILD_DURING_DEPLOYMENT app setting from your Azure App Service Environment variables.
       # 2. Refer to sample workflows for alternative deployment strategies: https://github.com/Azure/actions-workflow-samples/tree/master/AppService
-      - name: Clean up build artifacts
-      run: |
-        rm -rf .git
-        find . -type d -name __pycache__ -exec rm -rf {} +
-        find . -type d -name .pytest_cache -exec rm -rf {} +
-        find . -type d -name .egg-info -exec rm -rf {} +
+      
 
   deploy:
     runs-on: ubuntu-latest
@@ -68,4 +63,4 @@ jobs:
         with:
           app-name: 'ai-categorization-api'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9804B9BC49484E3BAEBFF40D5873E816 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A338BA60D8874154BD5D5FE5352EBC66 }}
