@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '913e6747-1168-4044-84c8-0f1c22bb83df'
 
   # Web app name
-  webAppName: 'ai-categorization-api'
+  webAppName: 'categoti'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'ai-categorization-api'
+  environmentName: 'categoti'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
